@@ -47,7 +47,7 @@ module CXF
 			when :nil
 				java.lang.Void
 			else
-				Kernel.const_get(type.to_s).become_java!(false)
+				Kernel.eval(type.to_s).become_java!(false)
 
 		end
 	end
